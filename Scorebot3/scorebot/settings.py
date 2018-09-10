@@ -8,13 +8,6 @@ USE_I18N = True
 USE_L10N = True
 TIME_ZONE = 'UTC'
 DUMP_DATA = True
-TWITTER_API = {
-    'ENABLED': False,
-    'CONSUMER_KEY': 'mFxeaaeoeFgFiIFJGXej2YXXK',
-    'ACCESS_TOKEN': '1720176876-pEAkdfNEvQf1lp6aod6lp9KArd4nHywUSIdUhWK',
-    'CONSUMER_SECRET': 'RyuTouM8B37WGEb3TiDSQGSKQ57S9zQY6JvRP85QVnbfUny0Z5',
-    'ACCESS_TOKEN_SECRET': 'tUPb3UBUctB060a1uhblq6TSWUMOTc8ZUg6K6Y57m3yT4',
-}
 APPEND_SLASH = False
 SBE_VERSION = 'v3.3.4'
 MEDIA_URL = '/upload/'
@@ -70,10 +63,10 @@ TEMPLATES = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bslv2018',
-        'HOST': 'scorebotdb',
-        'USER': 'bslv2018',
-        'PASSWORD': 'desertflippers',
+        'NAME': '',
+        'HOST': '',
+        'USER': '',
+        'PASSWORD': '',
     }
 }
 AUTH_PASSWORD_VALIDATORS = [

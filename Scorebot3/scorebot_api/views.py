@@ -700,6 +700,6 @@ class ScorebotAPI:
 
     @staticmethod
     def api_default_page(request):
-        for g in Game.object.filter(start__is_null=False, status=1):
+        for g in Game.objects.filter(start__isnull=False, status=1):
                 return HttpResponseRedirect('/scoreboard/%d/' % g.pk)
         return HttpResponseRedirect('/scoreboard/0/')

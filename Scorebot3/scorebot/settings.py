@@ -8,6 +8,14 @@ USE_I18N = True
 USE_L10N = True
 TIME_ZONE = 'UTC'
 DUMP_DATA = True
+TWITTER_API = {
+    'ENABLED': True,
+    'CONSUMER_KEY': '',
+    'ACCESS_TOKEN': '',
+    'CONSUMER_SECRET': '',
+    'ACCESS_TOKEN_SECRET': '',
+}
+TWITTER_TRACKING = ["@scorebot1", "#pvjctf", "@pvjredcell"]
 APPEND_SLASH = False
 SBE_VERSION = 'v3.3.4'
 MEDIA_URL = '/upload/'
@@ -17,12 +25,15 @@ STATIC_URL = '/static/'
 LOG_DIR = '/tmp/scorebot3'
 ROOT_URLCONF = 'scorebot.urls'
 DUMP_DIR = '/tmp/scorebot3_dumps'
-MEDIA_ROOT = '/home/scorebot3/logos'
 WSGI_APPLICATION = 'scorebot.wsgi.application'
 SECRET_KEY = 'mvn+$y(2lz%!nga3h@p7jf*zsrop^(ojp1)=mdn1gz+im-c%re'
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PLUGIN_DIR = os.path.join(BASE_DIR, 'scorebot_assets', 'plugins')
 DAEMON_DIR = os.path.join(BASE_DIR, 'scorebot_assets', 'daemons')
+STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'scorebot_static'),
+        ]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'scorebot_media')
 log_init(LOG_DIR, 'DEBUG')
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -75,4 +86,3 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',},
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',},
 ]
-
